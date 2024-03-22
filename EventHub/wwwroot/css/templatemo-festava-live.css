@@ -694,22 +694,38 @@ strong {
 }
 
 .schedule-table .pop-background-image {
-  background-image: url('../images/pearljam-logo.jpg');
+  background-image: url('../images/logos/pearljam-logo.jpg');
+}
+
+.schedule-table .slipknot-background-image {
+  background-image: url('../images/logos/slipknotlogo.jpg');
 }
 
 .schedule-table .rock-background-image {
-  background-image: url('../images/kisslogo.jpg');
+  background-image: url('../images/logos/kisslogo.jpg');
 }
 
 .schedule-table .country-background-image {
-  background-image: url('../images/linkinparklogo.png ');
+  background-image: url('../images/logos/linkinparklogo.png ');
+}
+
+.schedule-table .ironMaiden-background-image {
+  background-image: url('../images/logos/ironmaidenlogo.jpg');
+  background-size: cover;
+  
 }
 
 .schedule-table .mic-background-image {
-  background-image: url('../images/mjlogo.jpg ');
+  background-image: url('../images/logos/mjlogo.jpg ');
+}
+.schedule-table .scorpions-background-image {
+  background-image: url('../images/logos/Scorpions_logo.jpg');
+}
+.schedule-table .ramones-background-image {
+  background-image: url('../images/logos/ramoneslogo.jpg');
 }
 .schedule-table .gorillaz-background-image {
-  background-image: url('../images/gorillazlogo.png ');
+  background-image: url('../images/logos/gorillazlogo.png ');
 }
 
 .table-background-image-wrap {
