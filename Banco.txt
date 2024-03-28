@@ -1,0 +1,22 @@
+CREATE TABLE Eventos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Titulo VARCHAR(255),
+    Descricao TEXT,
+    DataEvento DATE,
+    Localizacao VARCHAR(255),
+    LinkVideo VARCHAR(255)
+);
+
+CREATE TABLE Artistas (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255),
+    GeneroMusical VARCHAR(255),
+    CanalYouTube VARCHAR(255)
+);
+
+CREATE TABLE CronogramaEvento (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    DataEvento DATE,
+    NomeArtista VARCHAR(255),
+    DescricaoArtista TEXT
+);
