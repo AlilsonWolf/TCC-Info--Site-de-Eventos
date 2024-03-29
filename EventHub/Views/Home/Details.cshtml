@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Evento";
 }
 
 
@@ -21,7 +21,7 @@
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.cshtml">
+                <a class="navbar-brand" asp-action="Index">
                     EVENTHUB
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -194,7 +194,7 @@
                     <div class="col-lg-5 col-12">
                         <div class="artists-thumb">
                             <div class="~/artists-image-wrap">
-                                <img src="images/artists/MJCover.jpg"
+                                <img src="~/images/artists/MJCover.jpg"
                                     class="artists-image img-fluid">
                             </div>
 
