@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EventHub.Models;
-
+namespace EventHub.Models
+{
     [Table("Eventos")]
     public class Evento
     {
@@ -22,13 +23,16 @@ namespace EventHub.Models;
         [Required(ErrorMessage ="Por Favor insira a Data do Evento")]
         [Display(Name ="Data do Evento")]
         public DateTime DataEvento { get; set; }
+
         [Required(ErrorMessage ="Por favor Insira a localização")]
         [StringLength(255,ErrorMessage ="O Tamanho maximo da Localização é de 255 carateres")]
         public string Localizacao { get; set; }
 
         [Required(ErrorMessage ="Por favor Insira o video")]
         [StringLength(300)]
-    
         public string LinkVideo { get; set; }
-    }
 
+        // Adicione a propriedade CronogramaEvento para representar a relação um-para-muitos
+        public List<CronogramaEvento> CronogramaEvento { get; set; }
+    }
+}

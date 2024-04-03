@@ -1,8 +1,12 @@
+using EventHub.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+string conexao = builder.Configuration.GetConnectionString("EventHub");
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conexao));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

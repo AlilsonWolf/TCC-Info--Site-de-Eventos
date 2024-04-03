@@ -25,9 +25,13 @@ namespace EventHub.Models;
         public string DescricaoArtista { get; set; }
 
         [ForeignKey("EventoId")]
+        public  Evento Evento { get; set; }
+
+         [ForeignKey("ArtistaId")]
+        public Artistas Artistas { get; set; }
         public int EventoId { get; set; }
 
-        [ForeignKey("ArtistaId")]
+       
         public int ArtistaId { get; set; }
 
     }
