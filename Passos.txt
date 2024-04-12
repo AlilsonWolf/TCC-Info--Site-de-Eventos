@@ -7,3 +7,5 @@ Criar um Projeto:
 
 Executar um Projeto:
     dotnet watch run
+
+    dotnet-aspnet-codegenerator controller -name EventoController -m Evento -dc AppDbContext -outDir Controllers -udl
