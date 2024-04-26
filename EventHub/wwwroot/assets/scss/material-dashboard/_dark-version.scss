@@ -5,12 +5,6 @@
     background-color: $dark-version-bg-color !important;
   }
 
-  &.virtual-reality {
-    > div {
-      background-image: none !important;
-    }
-  }
-
   .sidenav {
     background: $dark-version-sidenav-bg-color !important;
 
@@ -62,21 +56,6 @@
         }
       }
     }
-
-    &.bg-white {
-      .collapse {
-        .nav-item {
-          .nav-link {
-            &.active.text-dark {
-              i,
-              .nav-link-text {
-                color: $dark !important;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
   .fixed-plugin {
@@ -94,26 +73,7 @@
   }
 
   .bg-gradient-dark {
-    background-image: linear-gradient(195deg, $dark-gradient-dark, $dark-gradient-state-dark) !important;
-  }
-
-  .dropdown {
-    .dropdown-menu {
-      &:before {
-        color: $dark-version-card-bg-color;
-      }
-
-      .dropdown-item {
-        &:hover,
-        &:focus {
-          background-color: $dark-version-bg-color !important;
-        }
-        i,
-        .material-icons {
-          color: $white;
-        }
-      }
-    }
+    background-image: linear-gradient(195deg, $dark-gradient-dark, $dark-gradient-state-dark);
   }
 
   .card,
@@ -271,9 +231,6 @@
     color: $light;
   }
 
-  .form-control {
-    color: $dark-version-body-color !important;
-  }
 }
 
 body.dark-version {

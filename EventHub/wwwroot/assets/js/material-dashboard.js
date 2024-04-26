@@ -1,17 +1,3 @@
-// =========================================================
-// Material Dashboard 2 - v3.1.0
-// =========================================================
-
-// Product Page: https://www.creative-tim.com/product/material-dashboard
-// Copyright 2023 Creative Tim (https://www.creative-tim.com)
-// Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
-// Coded by www.creative-tim.com
-
-// =========================================================
-
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 "use strict";
 (function() {
   var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
@@ -29,7 +15,7 @@
     };
 
     if (document.getElementsByClassName('navbar-collapse')[0]) {
-      var fixedplugin = document.querySelector('.navbar:not(.navbar-expand-lg) .navbar-collapse');
+      var fixedplugin = document.querySelector('.navbar-collapse');
       var ps2 = new PerfectScrollbar(fixedplugin);
     };
 
@@ -552,7 +538,7 @@ function getEventTarget(e) {
 
 window.onload = function() {
   // Material Design Input function
-  var inputs = document.querySelectorAll('input, select, textarea');
+  var inputs = document.querySelectorAll('input');
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('focus', function(e) {
@@ -633,20 +619,18 @@ function toggleSidenav() {
 
 let referenceButtons = document.querySelector('[data-class]');
 
-if (sidenav) {
-  window.addEventListener("resize", navbarColorOnResize);
+window.addEventListener("resize", navbarColorOnResize);
 
-  function navbarColorOnResize() {
-    if (window.innerWidth > 1200) {
-      if (referenceButtons?.classList.contains('active') && referenceButtons?.getAttribute('data-class') === 'bg-transparent') {
-        sidenav.classList.remove('bg-white');
-      } else {
-        sidenav.classList.add('bg-white');
-      }
+function navbarColorOnResize() {
+  if (window.innerWidth > 1200) {
+    if (referenceButtons.classList.contains('active') && referenceButtons.getAttribute('data-class') === 'bg-transparent') {
+      sidenav.classList.remove('bg-white');
     } else {
       sidenav.classList.add('bg-white');
-      sidenav.classList.remove('bg-transparent');
     }
+  } else {
+    sidenav.classList.add('bg-white');
+    sidenav.classList.remove('bg-transparent');
   }
 }
 
@@ -823,54 +807,3 @@ function darkMode(el) {
     el.removeAttribute("checked");
   }
 };
-
-
-// side bullets
-
-const indicators = document.querySelectorAll(".indicator");
-const sections = document.querySelectorAll("section");
-
-if (indicators) {
-  const resetCurrentActiveIndicator = () => {
-    const activeIndicator = document.querySelector(".indicator.active");
-    if (activeIndicator) {
-      activeIndicator.classList.remove("active");
-    }
-  };
-
-  const onSectionLeavesViewport = (section) => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            resetCurrentActiveIndicator();
-            const element = entry.target;
-            const indicator = document.querySelector(`a[href='#${element.id}']`);
-            indicator.classList.add("active");
-            return;
-          }
-        });
-      }, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.75
-      }
-    );
-    observer.observe(section);
-  };
-
-  indicators.forEach((indicator) => {
-    indicator.addEventListener("click", function(event) {
-      event.preventDefault();
-      document
-        .querySelector(this.getAttribute("href"))
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-      resetCurrentActiveIndicator();
-      this.classList.add("active");
-    });
-  });
-
-  sections.forEach(onSectionLeavesViewport);
-}
