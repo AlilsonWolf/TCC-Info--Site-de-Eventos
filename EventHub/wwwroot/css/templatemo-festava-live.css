@@ -507,7 +507,7 @@ strong {
 -----------------------------------------*/
 .about-section {
   background-image: url('../images/edward-unsplash-blur.jpg');
-  background-color: #704010;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -604,7 +604,7 @@ strong {
 
 .artists-hover {
   background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: rgba(3, 3, 3, 0.75);
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -660,7 +660,7 @@ strong {
 }
 
 .schedule-table .bg-warning {
-  background: #f0a5a5 !important;
+  background: #7309d6 !important;
 }
 
 .schedule-table thead th {
@@ -680,7 +680,7 @@ strong {
 }
 
 .schedule-table thead th {
-  border-right: 1px solid #c7460a;
+  border-right: 1px solid #0c0c0b;
   border-bottom-color: transparent;
 }
 
