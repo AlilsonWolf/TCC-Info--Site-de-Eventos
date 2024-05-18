@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EventHub.Data;
 using EventHub.Models;
@@ -37,10 +32,10 @@ namespace EventHub.Controllers
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (evento == null)
             {
-                return NotFound();
+                return View(evento);
             }
 
-            return View(evento);
+            return NotFound();
         }
 
         // GET: Evento/Create
